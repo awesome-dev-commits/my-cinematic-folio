@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import ProjectsRow from "@/components/sections/ProjectsRow";
+import ExperienceTimeline from "@/components/sections/ExperienceTimeline";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -20,6 +21,7 @@ const Index = () => {
 
       <main>
         <ProjectsRow id="projects" title="My Projects" items={projects} />
+        <ExperienceTimeline />
 
         <section id="about" className="container py-12 md:py-16">
           <article className="max-w-3xl">
