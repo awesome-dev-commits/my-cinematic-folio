@@ -8,6 +8,7 @@ import project4 from "@/assets/project-4.jpg";
 
 const Index = () => {
   const projects = [
+    { image: project4, title: "My Work Experience", description: "Explore my career timeline.", href: "#experience" },
     { image: project1, title: "Cinematic Web App", description: "A fast, responsive app with polished UI and DX." },
     { image: project2, title: "Mobile Companion", description: "Seamless mobile experience with offline support." },
     { image: project3, title: "Data Dashboard", description: "Actionable insights with beautiful visualizations." },
