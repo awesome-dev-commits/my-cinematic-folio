@@ -6,6 +6,7 @@ export type ProjectItem = {
   title: string;
   description: string;
   href?: string;
+  target?: "_self" | "_blank" | "_parent" | "_top";
 };
 
 type ProjectsRowProps = {
@@ -26,7 +27,7 @@ const ProjectsRow = ({ id, title, items, className }: ProjectsRowProps) => {
           <CarouselContent>
             {items.map((item, idx) => (
               <CarouselItem key={idx} className="basis-3/4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <a href={item.href || "#"} className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-lg overflow-hidden">
+                <a href={item.href || "#"} target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined} className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-lg overflow-hidden">
                   <figure className="relative rounded-lg overflow-hidden bg-card">
                     <img
                       src={item.image}

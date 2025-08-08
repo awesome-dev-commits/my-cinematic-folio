@@ -1,14 +1,15 @@
 import Hero from "@/components/sections/Hero";
 import ProjectsRow from "@/components/sections/ProjectsRow";
 import ExperienceTimeline from "@/components/sections/ExperienceTimeline";
+import type { ProjectItem } from "@/components/sections/ProjectsRow";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
 const Index = () => {
-  const projects = [
-    { image: project4, title: "My Work Experience", description: "Explore my career timeline.", href: "#experience" },
+  const projects: ProjectItem[] = [
+    { image: project4, title: "My Work Experience", description: "Explore my career timeline.", href: "/experience", target: "_blank" },
     { image: project1, title: "Cinematic Web App", description: "A fast, responsive app with polished UI and DX." },
     { image: project2, title: "Mobile Companion", description: "Seamless mobile experience with offline support." },
     { image: project3, title: "Data Dashboard", description: "Actionable insights with beautiful visualizations." },
